@@ -1,0 +1,26 @@
+<div class="container text-center mt-3 mb-3 col-md-8">
+   <form class="card bg-light ml-3 mr-3" action="/car/edit/{{ car._id }}" method="post">
+      <h1 class="text text-primary mt-2 mb-2">Edit car</h1>
+      <div class="form-group mt-2 mb-2">
+         <label class="fw-bold" for="">Name</label>
+         <input class="form-control" type="text" name="name" value={{ car.name }} required>
+      </div>
+      <div class="form-group mt-2 mb-2">
+         <label class="fw-bold" for="">Category</label>
+         <input class="form-control" type="text" name="category" value={{ car.category }} required>
+      </div>
+      </div>
+            <div class="form-group mt-2 mb-2">
+         <label class="fw-bold" for="">Price</label>
+         <input class="form-control" type="number" name="price" value={{ car.price }} required>
+      </div>
+      <div class="form-group mt-2 mb-2">
+         <label class="fw-bold" for="">Image</label><br>
+         <img src="{{ car.poster }}" width="150" height="200">
+         <input class="form-control" type="text" name="image" value={{ car.image }} required>
+      </div>
+      <div class="form-group mt-2 mb-2">
+         <input class="btn btn-danger" type="submit" value="Edit">
+      </div>
+</form>
+</div>

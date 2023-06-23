@@ -1,0 +1,35 @@
+<div class="container text-center">
+{{!-- table.table.table-bordered>tr*3>th*7 --}}
+<table class="table bordered">
+   <tr>
+      <th class="h2 text text-success" colspan="6">CAR LIST</th>
+      <th>
+         <a class="btn btn-primary" href="/car/add">Add Car</a>
+      </th>
+   </tr>
+   <tr>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Price</th>
+      <th>Image</th>
+      <th>Menu</th>
+   </tr>
+   {{!-- heach --}}
+   {{#each car }}
+   <tr>
+      <th>{{ name }}</th>
+      <th>{{ category }}</th>
+      <th>{{ price }}</th>
+      <th>
+         <img src="{{ image }}" width="200" height="250">
+      </th>
+      <th>
+         <a class="btn btn-warning" href="/car/edit/{{_id}}">Edit</a>
+         <a class="btn btn-danger" href="/car/delete/{{_id}}"
+         onclick="return confirm('Do you want to delete this car ?');"
+         >Delete</a>
+      </th>
+   </tr>
+   {{/each}}
+</table>
+</div>
